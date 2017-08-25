@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+ </head>
+ <body>
+<style>
+  
+
+  
+     
+.logo{
+      text-align: center;
+	  padding:100px 0 0 0;
+		}  
+.text
+  { margin:120px 0 40px 0;
+    text-align: center;
+	 }
+	.text .g1
+	{
+     margin:0 20px 0 20px;
+	 opacity:0;
+	 }
+   .new .g1
+    {
+     margin:0 0 0 0;
+    transition:all 1s ease-out 0.3s;
+	opacity:1; }
+	.page1{  
+	     text-align:center;
+	      }
+
+.shield 
+   {
+     width:500px;   
+     padding:80px 0 0 100px;
+    display:block;
+	float:left;
+
+   }
+   .p2{
+       transform:translate(200px, 50px)rotate(45deg);
+   }
+   .p3{transform:translate(300px, 45px)rotate(60deg);}
+
+   .p4{transform:translate(268px, 35px)rotate(50deg);}
+
+   .p5{transform:translate(320px, 45px)rotate(48deg);}
+
+   .p6{transform:translate(358px, 35px)rotate(35deg);}
+
+   .p7{transform:translate(350px, 50px)rotate(40deg);} 
+
+   .p8{transform:translate(380px, 60px)rotate(32deg);}
+
+   .p9{transform:translate(400px, 30px)rotate(16deg);}
+
+   .p0{transform:translate(415px, 65px)rotate(25deg);}
+
+   .shield img { opacity:0;
+   }
+
+   .new img { 
+   opacity:1;
+   transform:translate(0px, 0px)rotate(0deg);
+   transition:all 2s ease-out 0.2s;
+   }
+	.info{
+	display:block;
+	float:left;
+	padding:200px 0 0 20px;
+}
+
+
+
+
+ </style>
+   
+
+     <div class="allpage">
+   <div class="section page1">
+	<div class="logo">
+		<img src="logo.png"/>
+	</div>
+	<div class="text">
+		<img src="text_1.png" class="g1"/>
+		<img src="text_2.png" class="g1"/>
+		<img src="text_3.png" class="g1"/>
+		<img src="text_4.png" class="g1"/>
+		<img src="text_5.png" class="g1"/>
+		<img src="text_6.png" class="g1"/>
+		<img src="text_7.png" class="g1"/>
+		<img src="text_8.png" class="g1"/>
+
+
+	  </div>
+
+
+	<img src="info_1.png"/>
+   </div>
+
+    <div class="section page2">
+	<div class="shield">
+  <img src="shield_1.png"class="p2">
+  <img src="shield_2.png"class="p3">
+  <img src="shield_3.png"class="p4">
+  <img src="shield_4.png"class="p5">
+  <img src="shield_5.png"class="p6">
+  <img src="shield_6.png"class="p7">
+  <img src="shield_7.png"class="p8">
+  <img src="shield_8.png"class="p9">
+  <img src="shield_9.png"class="p0">
+  </div>
+
+<div class="info">
+  <img src="info_2.png">
+  </div>
+
+   </div>
+  </div>
+<script src="1.js"></script>
+<script src="2.js"></script>
+<script>
+
+
+$(".allpage").fullpage({
+ sectionsColor:["rgb(13,165,214)","rgb(42,182,96)"],
+ afterLoad:function(a, b){
+   if(b == 1)
+   {
+	   $(".text").removeClass("new");
+   setTimeout(function(){
+   $(".text").addClass("new");
+   },2000);
+   }
+   if (b == 2)
+   {
+   $(".shield").removeClass("new");
+	   setTimeout(function(){
+    $(".shield").addClass("new");
+   },2000);
+  }
+  }
+});
+setTimeout(function(){
+   $(".shield").addClass("new");
+   },2000);
+
+
+</script>
+
+ </body>
+</html>
